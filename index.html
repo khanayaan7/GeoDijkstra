@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Dijkstra's algorithm In Action with realmap">
+  <meta name="author" content="Fatih Şennik">
+
+
+  <title>Dijkstra's algorithm implementation through real map</title>
+  
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
+    <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/leaflet@0.7.7/dist/leaflet.css"
+    />
+  <!-- Custom styles for this template -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+
+    
+
+    <div class="info">
+      <h1 class="headline">Djikstra Algorithm</h1>
+      <br>
+      <p class="lead">Dijkstra's Algorithm is a Graph algorithm that finds the shortest path from a source vertex to all other vertices in the Graph (single source shortest path). It is a type of Greedy Algorithm that only works on Weighted Graphs having positive weights. The time complexity of Dijkstra's Algorithm is O(V2) with the help of the adjacency matrix representation of the graph. This time complexity can be reduced to O((V + E) log V) with the help of an adjacency list representation of the graph, where V is the number of vertices and E is the number of edges in the graph.</p>
+    </div>
+    <div class="info row">
+      <div class="col-lg-12">
+        <h1 class="headline">How to Use</h1>
+        <br>
+        <p class="lead">Left Click to add nodes, then right-click a node to link it to another node, and finally right-click a third node to link it to the first. They can be flexibly repositioned by dragging the nodes, holding in the node's center, and moving in accordance with the backdrop map. You can enter the latitude and longitude of your preferred spot on the map and immediately navigate there by clicking the get me there button in order to easily draw on the map. To get the shortest path between specified nodes using Dijkstra's method, choose the starting node, choose the end node, and then click to start. </p>
+
+      </div>
+    </div>
+    <br>
+    <!-- Main Map Canvas -->
+    <div class="row">
+
+      <div class="col-lg-12">
+        <form>
+          <div class="form-row align-items-center">
+            <div class="col-auto">
+              <label class="mr-sm-2" for="from">From</label>
+              <select id="from-starting" class="custom-select mb-2 mr-sm-2 mb-sm-0"></select>
+            </div>
+            <div class="col-auto">
+              <label class="mr-sm-2" for="to">To</label>
+              <select id="to-end" class="custom-select mb-2 mr-sm-2 mb-sm-0"></select>
+
+            </div>
+
+            <div class="col-auto">
+              <button type="button" id="clearmap" class="btn btn-danger">Clear Map</button>
+            </div>
+            <div class="col-auto">
+              <button type="button" id="getshortestroute" class="btn btn-success" title="find shortest path between nodes"> Start Route</button>
+            </div>
+            <div class="col-auto">
+              <label class="sr-only" for="inlineFormInput">Latitude</label>
+              <input type="text" class="form-control mb-2 mb-sm-0" id="latitude" placeholder="Enter Latitude">
+            </div>
+            <div class="col-auto">
+              <label class="sr-only" for="inlineFormInput">Longitude</label>
+              <input type="text" class="form-control mb-2 mb-sm-0" id="longitude" placeholder="Enter Longitude">
+            </div>
+            
+            <div class="col-auto">
+              <button type="button" id= "getmethere"class="btn btn-primary">Go</button>
+            </div>
+           
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+
+    <br>
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="svg-map" style="width: 1110px; height: 800px" class="card">
+        </div>
+        <form style="margin-top:5px;">
+
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+  <br>
+  <!-- /container -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@3.3.0/d3.min.js"></script>
+    
+  
+  <script
+  src="https://cdn.jsdelivr.net/npm/leaflet@0.7.7/dist/leaflet.js">
+</script>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

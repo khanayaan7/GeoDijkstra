@@ -1,0 +1,76 @@
+body {
+  padding-top: 20px;
+  background-color: rgb(170, 182, 206);
+}
+#btn1{
+  background-color: #69688f;
+}
+.headline{
+  text-decoration: underline;
+  text-align: center;
+}
+.info {
+  text-align: center;
+  margin:50px 50px;
+}
+
+#clearmap,#getshortestroute,#getmethere{
+  background-color: rgb(63, 69, 139);
+}
+.card {
+ margin-top: 5px;
+}
+.lead{
+  font-weight: 400;
+}
+
+.svgmap { 
+
+  background-repeat: no-repeat;
+  overflow: hidden;
+   
+}
+circle { 
+  fill: rgb(69, 95, 156);
+  stroke: #141C25;
+  stroke-width: 1;
+  cursor: pointer;
+}
+
+.label 
+{ 
+  font-family: arial;
+  stroke: #ffffff;
+  cursor: pointer;
+}
+
+line { 
+  stroke: #1E1E1E;
+  stroke-dasharray: 5,5;
+  stroke-width: 2;
+}
+
+line.shortest { 
+  stroke: rgb(146, 156, 185);
+  stroke-dasharray: 5,0;
+  stroke-width: 11;
+  -webkit-box-shadow: 4px 5px 5px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 5px 5px -1px rgba(0,0,0,0.75);
+  box-shadow: 4px 5px 5px -1px rgba(0,0,0,0.75);
+}
+
+.line-label { 
+  font-family: arial;
+  font-size: 26px;
+  stroke: #7286a7;
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .masthead,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
