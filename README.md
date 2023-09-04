@@ -1,4 +1,4 @@
-GeoDjikstra
+GeoDijkstra
 
 Libraries and Frameworks used:
 ->HTML
